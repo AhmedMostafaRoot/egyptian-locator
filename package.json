@@ -1,0 +1,39 @@
+{
+  "name": "egypt-local-directory",
+  "version": "1.0.0",
+  "description": "Programmatic SEO Directory for Egyptian Local Businesses in Arabic (RTL)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:seed": "tsx src/db/seed.ts",
+    "scrape": "tsx scripts/scrape-businesses.ts --city=all",
+    "scrape:cairo": "tsx scripts/scrape-businesses.ts --city=cairo",
+    "scrape:giza": "tsx scripts/scrape-businesses.ts --city=giza",
+    "scrape:alex": "tsx scripts/scrape-businesses.ts --city=alexandria",
+    "import:scraped": "tsx scripts/import-scraped-data.ts",
+    "cron:verify-whatsapp": "tsx scripts/verify-whatsapp-links.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.38.4",
+    "lucide-react": "^0.473.0",
+    "next": "14.2.24",
+    "puppeteer-core": "^25.16.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "autoprefixer": "^10.6.2",
+    "drizzle-kit": "^0.30.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
